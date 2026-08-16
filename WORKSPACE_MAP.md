@@ -12,32 +12,39 @@ Project-Baby-Steps/
 │   ├── rules/
 │   │   └── graphify.md                   # Graphify AST maintenance rules
 │   └── skills/                           # Installed Master Design Skills
-│       ├── 3d-book-physics/              # 3D Bookshelf unsheathing, cover lift & dual-sided page flip mechanics
-│       ├── awwwards-motion-engineering/  # GSAP, Lenis, SVG tracking, Hyperplexed/Olivier Larose techniques
-│       ├── luxury-creative-craftsmanship/# 3D skeuomorphism, walnut/brass materials, Web Audio synthesizers
-│       └── ui-ux-pro-max-skill/          # Master AI-driven design intelligence and UI/UX playbook
+│       ├── 3d-book-physics/              
+│       ├── awwwards-motion-engineering/  
+│       ├── luxury-creative-craftsmanship/
+│       ├── uiverse-micro-interactions/   # Pure CSS Uiverse component playbook
+│       └── ui-ux-pro-max-skill/          
 ├── AGENTS.md                             # Primary agent behavior rules & orientation guide
 ├── PREFERENCES.md                        # Global developer preferences, design tool map, likes/dislikes
 ├── WORKSPACE_MAP.md                      # Active project registry and workspace tree (THIS file)
 ├── graphify-out/                         # Graphify Knowledge Graph database (graph.json, GRAPH_REPORT.md)
 └── projects/                             # Active client & personal website projects
-    ├── auto-sales-service-hub/           # Velocity Toyota Multi-Page Dealership Portal
-    ├── interior-design-studio/           # Aura & Dakshin Luxury Studio Portfolio (Single-Page)
-    │   ├── index.html                    # v7.0: Cinematic Hero Parallax, Unbroken Scrollytelling Highway, Detailed Mahogany Bookshelf, High-Contrast Book Spread Modal
-    │   ├── css/styles.css                # v7.0: Parallax Architectural Backdrop, Mahogany 3D Library, Luxury Envelope Seal, Chrono Calendar Modal
-    │   ├── js/main.js                    # v7.0: Unbroken Highway Viewport, Flying Book Arc, Chrono Calendar logic
-    │   ├── assets/                       # hero.jpg, hero_bedroom.jpg, hero_lounge.jpg, hero_chettinad.jpg, about.jpg
-    │   └── README.md                     # Comprehensive project documentation & Vercel deployment guide
-    └── srivarshan-portfolio/             # Srivarshan Personal Cream-Themed Portfolio (Single-Page)
+    ├── auto-sales-service-hub/           
+    ├── interior-design-studio/           
+    └── srivarshan-portfolio/             
 ```
+
+## 📚 Global Skills Registry & Installation Protocol
+The following skills represent the core intelligence of this workspace. **All agents MUST verify these skills are present** in `.agents/skills/` or `scratch/`. If they are missing, the agent MUST clone them immediately before starting work.
+
+| Skill Name | Purpose | GitHub/Source Link |
+| :--- | :--- | :--- |
+| `antigravity-skills` | Foundational Antigravity AI agent skills | `https://github.com/rmyndharis/antigravity-skills.git` |
+| `agentic-awesome-skills` | 2,000+ specialized dev & security playbooks | `https://github.com/sickn33/agentic-awesome-skills.git` |
+| `uiverse-micro-interactions`| Custom pure CSS component guidelines | *(Local to workspace)* |
+| `ui-ux-pro-max-skill` | Master AI-driven design intelligence playbook | *(Local to workspace)* |
+| `awwwards-motion-engineering`| GSAP, Lenis, and WebGL physics standards | *(Local to workspace)* |
 
 ## 📂 Project Registry
 
 | Project Name | Client / Theme | Architecture | Status | Repository | Link |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Aura & Dakshin Interiors Studio** | Warm Earth & Cream Luxury (`#FAF7F2`) | Single-Page Canvas | Live & Pushed (`v14.0` Perfect Alignment, Scrollytelling Tracking, Vercel Ready) | [`aura-dakshin-interior-studio`](https://github.com/Srivarshan-adaikkalam/aura-dakshin-interior-studio) | [`projects/interior-design-studio`](file:///c:/Users/NC25936-Srivarshan%20A/.gemini/antigravity-ide/scratch/Project-Baby-Steps/projects/interior-design-studio) |
-| **Srivarshan Portfolio** | Warm Cream Luxury Theme (`#FDFBF7`) | Single-Page Canvas | Active | Local Development | [`projects/srivarshan-portfolio`](file:///c:/Users/NC25936-Srivarshan%20A/.gemini/antigravity-ide/scratch/Project-Baby-Steps/projects/srivarshan-portfolio) |
-| **Velocity Toyota** | Anaamalais Toyota Light Theme | Multi-Page (`index`, `showroom`, `trade-in`, `services`, `contact`) | Completed | [`AutoSales-Multipage-Website`](https://github.com/Srivarshan-adaikkalam/AutoSales-Multipage-Website) | [`projects/auto-sales-service-hub`](file:///c:/Users/NC25936-Srivarshan%20A/.gemini/antigravity-ide/scratch/Project-Baby-Steps/projects/auto-sales-service-hub) |
+| **Aura & Dakshin Interiors Studio** | Warm Earth & Cream Luxury (`#FAF7F2`) | Single-Page Canvas | Live & Pushed | [`aura-dakshin-interior-studio`](https://github.com/Srivarshan-adaikkalam/aura-dakshin-interior-studio) | `projects/interior-design-studio` |
+| **Srivarshan Portfolio** | Warm Cream Luxury Theme (`#FDFBF7`) | Single-Page Canvas | Active | Local Development | `projects/srivarshan-portfolio` |
+| **Velocity Toyota** | Anaamalais Toyota Light Theme | Multi-Page | Completed | [`AutoSales-Multipage-Website`](https://github.com/Srivarshan-adaikkalam/AutoSales-Multipage-Website) | `projects/auto-sales-service-hub` |
 
 ## 🚀 Getting Started
 To start a new client project:
