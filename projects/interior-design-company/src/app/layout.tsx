@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 
+import CustomCursor from "@/components/CustomCursor";
+import Navigation from "@/components/Navigation";
+
 export const metadata: Metadata = {
-  title: "Interior Design Studio",
-  description: "A luxury interior design portfolio built with Next.js",
+  title: "Ravi Interiors",
+  description: "A luxury interior design digital showroom.",
 };
 
 export default function RootLayout({
@@ -15,6 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <CustomCursor />
+        <Navigation />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

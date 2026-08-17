@@ -60,6 +60,13 @@
 *   ❌ **No Native Open Date Pickers**: Never render raw browser inputs (`<input type="date">`).
 *   ❌ **No Unstyled Modals**: All modals must feel like physical luxury artifacts with backdrop blur and depth.
 *   ❌ **No Automatic Git Push**: Never push code to remote repositories without an explicit user command.
+*   ❌ **No Heavy Images**: Intelligent image reuse with CSS clipping (aspect-ratios, grayscale) is preferred over loading 50 heavy images.
+
+### 🏛️ Ravi Interiors Cinematic Aesthetic (v2 Update)
+1. **Light Architectural Palette**: Transition from dark walnut to Warm Ivory (`#FAFAF8`), Soft Cream (`#F4F1EA`), and Natural Ash Wood. Use Architectural Charcoal for text.
+2. **Scroll-Driven Spatial Transitions**: Avoid blocky section stacking. Sections should pin and overlap (e.g. pinned asymmetrical philosophy boxes with grayscale-to-color image scrubbing).
+3. **Horizontal Roadmaps**: Journey workflows (like a multi-stage interior design process) should be presented via horizontal scrolling pinned to a container.
+4. **Soft Stone Haptics**: Replace heavy brass/click audio with soft, low-frequency stone/tactile clicks for a lighter, breathable aesthetic.
 
 ---
 

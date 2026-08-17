@@ -1,196 +1,429 @@
+/* =========================================
+   RAVI INTERIORS - LIGHT ARCHITECTURAL
+   ========================================= */
+
 .main {
   width: 100vw;
   min-height: 100vh;
+  background-color: var(--bg-canvas);
+  color: var(--text-dark);
 }
 
-.nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 2rem 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-  mix-blend-mode: difference;
-  color: #fff;
-}
-
-.logo {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.links {
-  display: flex;
-  gap: 2rem;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
+/* =========================================
+   1. HERO SEQUENCE
+   ========================================= */
 .heroSection {
   width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 150vh;
+  background-color: var(--text-dark);
 }
 
 .heroContainer {
-  position: relative;
+  position: sticky;
+  top: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  /* Will be animated by GSAP */
-  margin: 0 auto;
+  will-change: transform, border-radius, width, height;
 }
 
 .heroImage {
   object-fit: cover;
-  /* GSAP scales this from 1.3 to 1 */
   transform-origin: center;
+  will-change: transform;
 }
 
 .heroOverlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.3);
+  inset: 0;
+  background: rgba(31, 30, 29, 0.2);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.heroOverlay h1 {
-  color: #fff;
-  font-size: 5rem;
+.heroTitle {
+  color: var(--bg-canvas);
+  font-size: 7vw;
   text-align: center;
-  line-height: 1.1;
-  /* GSAP animates this */
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  will-change: transform, opacity;
 }
 
-.statsSection {
+.heroTitle span {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--bg-surface);
+  font-weight: 300;
+}
+
+/* =========================================
+   2. INTRODUCTION (TYPOGRAPHY STAGGER)
+   ========================================= */
+.introSection {
+  padding: 15rem 10vw;
+  background-color: var(--bg-canvas);
   display: flex;
   justify-content: center;
-  gap: 4rem;
-  padding: 6rem 4rem;
+  align-items: center;
+  min-height: 80vh;
 }
 
-.statBox {
-  background: #EBE5D9; /* Warm earthy beige */
-  padding: 3rem 4rem;
-  border-top-left-radius: 999px;
-  border-top-right-radius: 999px;
-  text-align: center;
-  min-width: 200px;
-}
-
-.statBox h3 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+.introText {
+  font-family: var(--font-heading);
+  font-size: 4.5vw;
+  line-height: 1.2;
   color: var(--text-dark);
+  text-align: center;
+  max-width: 1200px;
 }
 
-.statBox p {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(44,44,44,0.7);
+.char {
+  display: inline-block;
+  will-change: transform, opacity;
 }
 
-.portfolioSection {
-  padding: 6rem 4rem;
-  background: #fff;
-  border-radius: 48px 48px 0 0;
+/* =========================================
+   3. IT'S IN THE DETAILS (PINNED ASYMMETRICAL ZOOM)
+   ========================================= */
+.detailsSection {
+  background-color: var(--bg-canvas);
+  padding: 8rem 0;
 }
 
-.portfolioHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.detailsHeader {
+  padding: 0 4vw;
   margin-bottom: 4rem;
 }
 
-.portfolioHeader h2 {
-  font-size: 3rem;
+.detailsHeader h2 {
+  font-size: 5vw;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: var(--text-dark);
 }
 
-.contactBtn {
-  padding: 1rem 2rem;
-  border: 1px solid var(--text-dark);
-  background: transparent;
-  border-radius: 999px;
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.detailsContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  min-height: 100vh;
 }
 
-.contactBtn:hover {
-  background: var(--text-dark);
-  color: #fff;
+.detailsLeft {
+  padding: 4rem 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.archesContainer {
+.detailsRight {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 4vw;
+}
+
+.detailsImgWrapper {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  border-radius: 24px;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.detailsImage {
+  object-fit: cover;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.detailsContentBox {
+  margin-bottom: 8rem;
+  opacity: 0.2; /* Managed by GSAP */
+  transition: opacity 0.4s ease;
+}
+
+.detailsContentBox h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+.detailsContentBox p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 450px;
+}
+
+/* =========================================
+   4. FEATURED PROJECTS (HOVER ZOOM, CROPS)
+   ========================================= */
+.projectsSection {
+  padding: 10rem 4vw;
+  background-color: var(--bg-canvas);
+}
+
+.projectsHeader {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 2rem;
+  margin-bottom: 8rem;
 }
 
-.archMask {
-  flex: 1;
-  height: 60vh;
+.projectsHeader h2 {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4vw;
+}
+
+.projectCard {
   position: relative;
-  background: #000;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  cursor: pointer;
 }
 
-.archTall {
-  height: 80vh;
+/* Specific architectural crops */
+.projectCard:nth-child(even) {
+  margin-top: 10rem;
 }
 
-.archImageWrapper {
+.projectImgWrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: var(--bg-muted);
+}
+
+.projectCard:nth-child(1) .projectImgWrapper { aspect-ratio: 3/4; }
+.projectCard:nth-child(2) .projectImgWrapper { aspect-ratio: 4/5; }
+.projectCard:nth-child(3) .projectImgWrapper { aspect-ratio: 16/9; grid-column: span 2; border-radius: 32px;}
+
+.projectImg {
+  object-fit: cover;
+  transition: transform 1.2s var(--ease-out-expo);
+}
+
+.projectCard:hover .projectImg {
+  transform: scale(1.05);
+}
+
+.projectMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.projectMeta h3 {
+  font-size: 1.8rem;
+}
+
+.projectMeta span {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+/* =========================================
+   5. HORIZONTAL ROADMAP
+   ========================================= */
+.roadmapSection {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--text-dark);
+  color: var(--bg-canvas);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.roadmapBgWrapper {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.archImg {
-  object-fit: cover;
-  /* GSAP handles parallax Y translation */
-  top: -20% !important;
-  height: 140% !important; 
-}
-
-.archLabel {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #fff;
-  padding: 1rem 2rem;
-  border-radius: 999px;
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  white-space: nowrap;
-}
-
-.footer {
+  width: 150vw; /* Wider for parallax */
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--text-dark);
-  color: var(--bg-color);
+  z-index: 0;
 }
 
-.footer h2 {
+.roadmapBgImage {
+  object-fit: cover;
+  filter: grayscale(100%) brightness(0.4);
+}
+
+.roadmapBgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(31,30,29,0.9) 0%, rgba(31,30,29,0.4) 50%, rgba(31,30,29,0.9) 100%);
+  z-index: 1;
+}
+
+.roadmapContainer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 15vw;
+  padding: 0 20vw;
+  height: 60vh;
+  align-items: center;
+  will-change: transform;
+}
+
+.roadmapStep {
+  flex-shrink: 0;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.stepNumber {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--accent-wood);
+  border: 1px solid var(--accent-wood);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  width: max-content;
+}
+
+.roadmapStep h3 {
+  font-size: 3.5rem;
+  color: var(--bg-surface);
+}
+
+.roadmapStep p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #A09E9B;
+}
+
+/* =========================================
+   7. SMART CONTACT & FAQ
+   ========================================= */
+.contactSection {
+  background-color: var(--text-dark);
+  color: var(--bg-canvas);
+  padding: 10rem 4vw 2rem 4vw;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+  margin-bottom: 10rem;
+}
+
+.contactLeft h2 {
+  font-family: var(--font-heading);
   font-size: 5rem;
-  font-style: italic;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.contactLeft p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(250, 250, 248, 0.7);
+  max-width: 400px;
+  margin-bottom: 4rem;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inputField, .textArea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 248, 0.3);
+  padding: 1rem 0;
+  color: var(--bg-canvas);
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+}
+
+.inputField:focus, .textArea:focus {
+  outline: none;
+  border-bottom-color: var(--bg-canvas);
+}
+
+.textArea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submitBtn {
+  align-self: flex-start;
+  margin-top: 2rem;
+}
+
+.faqWrapper {
+  padding-top: 2rem;
+}
+
+.faqTitle {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  color: rgba(250, 250, 248, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(250, 250, 248, 0.1);
+}
+
+.footerLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.footerLinks a {
+  color: var(--bg-canvas);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footerLinks a:hover {
+  opacity: 1;
+}
+
+.footerMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: right;
+  font-size: 0.9rem;
+  opacity: 0.5;
 }

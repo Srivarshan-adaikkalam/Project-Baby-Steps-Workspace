@@ -1,0 +1,102 @@
+.section {
+  padding: 10rem 4vw;
+  background-color: var(--text-dark);
+  color: var(--bg-canvas);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.header h2 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  border-radius: 24px;
+  overflow: hidden;
+  --clip: 50%;
+  cursor: ew-resize;
+}
+
+.imageBefore, .imageAfter {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.imageAfter {
+  clip-path: polygon(var(--clip) 0, 100% 0, 100% 100%, var(--clip) 100%);
+  z-index: 2;
+}
+
+.image {
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.label {
+  position: absolute;
+  bottom: 2rem;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: rgba(250, 250, 248, 0.9);
+  color: var(--text-dark);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  z-index: 5;
+}
+
+.imageBefore .label {
+  left: 2rem;
+}
+
+.imageAfter .label {
+  right: 2rem;
+}
+
+.sliderLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--bg-canvas);
+  z-index: 10;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.sliderHandle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: var(--bg-canvas);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dark);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.sliderHandle svg {
+  width: 20px;
+}

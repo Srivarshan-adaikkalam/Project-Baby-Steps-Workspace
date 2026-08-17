@@ -1,11 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-color: #F8F5F0;
-  --text-dark: #2C2C2C;
-  --accent: #B09B71;
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Outfit', sans-serif;
+  /* Ravi Interiors Light Architectural Palette */
+  --bg-canvas: #FAFAF8;          /* Warm Ivory */
+  --bg-surface: #F4F1EA;         /* Soft Cream */
+  --bg-muted: #E5E0D8;           /* Muted Stone */
+  
+  --text-dark: #1F1E1D;          /* Architectural Charcoal */
+  --text-muted: #4A4238;         /* Earthy Sepia */
+  
+  --accent-wood: #C9BCAE;        /* Natural Ash Wood */
+  --accent-terracotta: #C85A32;  /* Occasional warm detail */
+  
+  /* Multi-Layer Ambient Occlusion Shadows for Light Theme */
+  --shadow-sm: 0 4px 14px rgba(31, 30, 29, 0.03);
+  --shadow-md: 0 12px 36px rgba(31, 30, 29, 0.05), 0 2px 6px rgba(31, 30, 29, 0.02);
+  --shadow-lg: 0 24px 60px rgba(31, 30, 29, 0.08), 0 4px 12px rgba(31, 30, 29, 0.03);
+
+  --font-heading: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-body: 'Inter', 'Outfit', sans-serif;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 * {
@@ -15,16 +30,17 @@
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: var(--bg-canvas);
   color: var(--text-dark);
   font-family: var(--font-body);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 400;
+  color: var(--text-dark);
 }
 
 /* Base Arch Class */
