@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --bg-color: #F8F5F0;
+  --text-dark: #2C2C2C;
+  --accent: #B09B71;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+}
+
+/* Base Arch Class */
+.arch-mask {
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  overflow: hidden;
+}
+
+/* Base Rounded Container */
+.rounded-container {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* Lenis Smooth Scroll Fixes */
+html.lenis {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
