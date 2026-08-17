@@ -23,6 +23,7 @@ Project-Baby-Steps/
 ├── graphify-out/                         # Graphify Knowledge Graph database (graph.json, GRAPH_REPORT.md)
 └── projects/                             # Active client & personal website projects
     ├── auto-sales-service-hub/           
+    ├── interior-design-company/
     ├── interior-design-studio/           
     └── srivarshan-portfolio/             
 ```
@@ -43,6 +44,7 @@ The following skills represent the core intelligence of this workspace. **All ag
 | Project Name | Client / Theme | Architecture | Status | Repository | Link |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Aura & Dakshin Interiors Studio** | Warm Earth & Cream Luxury (`#FAF7F2`) | Single-Page Canvas | Live & Pushed | [`aura-dakshin-interior-studio`](https://github.com/Srivarshan-adaikkalam/aura-dakshin-interior-studio) | `projects/interior-design-studio` |
+| **Interior Design Company (New)** | Warm Earth & Cream Luxury | SSR (Next.js) | Active | [`great-interior-design`](https://github.com/Srivarshan-adaikkalam/great-interior-design) | `projects/interior-design-company` |
 | **Srivarshan Portfolio** | Warm Cream Luxury Theme (`#FDFBF7`) | Single-Page Canvas | Active | Local Development | `projects/srivarshan-portfolio` |
 | **Velocity Toyota** | Anaamalais Toyota Light Theme | Multi-Page | Completed | [`AutoSales-Multipage-Website`](https://github.com/Srivarshan-adaikkalam/AutoSales-Multipage-Website) | `projects/auto-sales-service-hub` |
 

@@ -14,6 +14,7 @@
 - **Masonry Grid Filters**: Never use GSAP `fromTo` shrink animations on grid items that are *already visible* during a state filter. Instead, instantly hide non-matching items with CSS `display: none` and only animate the new arrivals to prevent jitter.
 - **Typography & Aesthetics**: Avoid handwriting fonts for captions. Use **Cormorant Garamond (italicized, semi-bold)** for heritage luxury tags and polaroid captions.
 - **Vercel & Git Overrides**: If the remote GitHub branch falls out of sync and rejects pushes, the local workspace is the definitive source of truth. Resolve by force-pushing: `git push -u origin main --force`.
+- **Interior Design SSR Aesthetics**: Use a Camera Pull-back transition from hero to arched mask, apply `#F8F5F0` background with `#2C2C2C` text using Outfit/Playfair fonts. Rely on `lenis` wrapped around a layout for ultra-smooth GSAP ScrollTrigger experiences.
 
 ## Community Hubs (Navigation)
 - skills/ui-ux-pro-max-skill/cli/src/commands/init.ts
